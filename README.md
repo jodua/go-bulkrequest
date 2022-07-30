@@ -16,7 +16,7 @@ Every bulk request is highly configurable, for example:
 ## Installation
 
 ```bash
-go get github.com/jodua/go-bulkrequest
+go get github.com/jodua/go-bulkrequest/bulkrequest
 ```
 
 ## Usage
@@ -177,9 +177,9 @@ bulkRequest.SetParser(&parser)
 ### Building and executing bulk request
 
 ```go
-bulkRequest := bulkRequest.Build()
+br := bulkRequest.Build()
 
-fetch, err := bulkRequest.Fetch()
+fetch, err := br.Fetch()
 if err != nil {
     // handle error
 }
